@@ -4,23 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component';
-import { TellingComponent } from './telling/telling.component';
-import { TellingService } from './services/telling.service';
+import { WaarnemingComponent } from './waarneming/waarneming.component';
+import { VogeltellingService } from './services';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TellingComponent
+    WaarnemingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: 'telling/:id', component: TellingComponent }
+      { path: 'telling/:id', component: WaarnemingComponent }
     ])
   ],
-  providers: [TellingService],
+  providers: [VogeltellingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

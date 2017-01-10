@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Telling, Waarneming } from '../models';
 import { Config } from './config';
+
 @Injectable()
-export class TellingService {
+export class VogeltellingService {
 
-  waarnemingen; //buffer om niet iedere keer een request te doen
+  private waarnemingen; //buffer om niet iedere keer een request te doen
 
-  constructor(private http: Http) {
-    var a: TellingService;
-  }
+  constructor(private http: Http) { }
 
   public getTellingen(cb: (t: Telling[]) => any) {
     this.http.get(Config.urlTellingen).subscribe(res => {

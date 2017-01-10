@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Telling } from './models';
-import { TellingService } from './services/telling.service';
+import { VogeltellingService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +11,10 @@ export class AppComponent implements OnInit {
 
   tellingen: Telling[];
 
-  constructor(private service: TellingService) { }
+  constructor(private service: VogeltellingService) { }
 
   ngOnInit() {
     this.service.getTellingen(tellingen => console.log(this.tellingen = tellingen));
   }
+  
 }
