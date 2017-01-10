@@ -1,0 +1,23 @@
+.waarnemingen {
+    float: right;
+    width: 80%;
+}
+
+.waarneming {    
+    width: 110px;
+    height: 110px;
+    background-color: #317ec6;
+    color: white;
+    display: inline-block;
+    margin: 7px;
+    text-align: center;
+    span {        
+        font-size: 12px;
+    }
+    p {                
+        text-align: left;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 20px 0px;
+    }
+}

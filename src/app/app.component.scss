@@ -1,0 +1,28 @@
+.tellingen {
+    position: fixed;
+    width: 20%;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    background-color: white;
+
+    td:first-child {
+        text-align: right;
+        padding-right: 0;
+    }
+
+    td{
+        padding: 0 5px 5px 5px;
+    }
+}
+tr.blue {
+    color:white;
+    background-color: #317ec6;
+}
+tr.active {
+    background-color: orange;
+}

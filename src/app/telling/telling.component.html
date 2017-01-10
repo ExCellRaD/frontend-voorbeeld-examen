@@ -1,0 +1,7 @@
+<div *ngIf="waarnemingen" class="waarnemingen">
+  <h1>Waarnemingen</h1>
+  <div *ngFor="let waarneming of waarnemingen" class="waarneming">
+    <span>{{waarneming.vogelsoort}}</span>
+    <p>{{waarneming.aantal}}</p>
+  </div>
+</div>

@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div class="tellingen">
+  <h1>Tellingen</h1>
+  <table *ngIf="tellingen">
+    <tr *ngFor="let telling of tellingen" [routerLink]="['telling', telling.id]" [class.blue]="!(telling.id%2)"
+    [routerLinkActive]="'active'">
+      <td>{{telling.datum}}</td>
+      <td>{{telling.waarnemer}}</td>
+    </tr>
+  </table>
+</div>
+<router-outlet></router-outlet>
