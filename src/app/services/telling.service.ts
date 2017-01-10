@@ -23,13 +23,17 @@ export class TellingService {
   }
 
   public getWaarnemingen(id, cb: (t: Waarneming[]) => any) {
+
     let convertWaarnemignen = () => {
+
       var results = new Array<Waarneming>();
+
       for (let waarneming of this.waarnemingen) {
         let amount = waarneming['Telling ID ' + id];
         if (amount === '') amount = 0;
         results.push(new Waarneming(waarneming.Vogelsoort, amount));
       }
+      
       cb(results);
     }
 

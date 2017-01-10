@@ -4,7 +4,6 @@ import { TellingService } from '../services/telling.service';
 import { Waarneming } from '../models';
 
 @Component({
-  selector: 'app-telling',
   templateUrl: './telling.component.html',
   styleUrls: ['./telling.component.scss']
 })

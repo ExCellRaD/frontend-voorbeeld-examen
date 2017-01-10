@@ -10,7 +10,6 @@ import { TellingService } from './services/telling.service';
 export class AppComponent implements OnInit {
 
   tellingen: Telling[];
-  title = 'app works!';
 
   constructor(private service: TellingService) { }
 
